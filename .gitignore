@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# GitHub personal access token:
+src/token.ts
+
+# Mac stuff:
+.DS_Store

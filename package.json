@@ -1,0 +1,24 @@
+{
+  "name": "github-issues-and-comments",
+  "version": "1.0.0",
+  "description": "Example GraphQL app that renders latest issues and issue comments for a given GitHub repository.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "keywords": ["graphql", "rest", "github"],
+  "author": "Erik Wittern",
+  "license": "MIT",
+  "dependencies": {
+    "dayjs": "^1.8.26",
+    "react": "^16.13.1",
+    "snarkdown": "^1.2.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "parcel": "^1.12.4",
+    "react-dom": "^16.13.1",
+    "tailwindcss": "^1.4.6",
+    "typescript": "^3.8.3"
+  }
+}
