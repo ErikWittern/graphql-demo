@@ -7,7 +7,7 @@ To use either of GitHub's APIs, a personal access token is required. GitHub prov
 
 To make the token available to this app, create a file `src/token.ts` with the following content:
 
-```
+```javascript
 export const token = '<your-token-goes-here>'
 ```
 
