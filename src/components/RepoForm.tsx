@@ -18,7 +18,7 @@ export function RepoForm (props) {
           className="w-full bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 appearance-none leading-normal"
           type="text"
           placeholder="Enter repository (owner/name)"
-          name="name"
+          name="repo-name"
           value={text}
           onChange={e => setText(e.target.value)}/>
         <input
