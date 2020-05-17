@@ -1,7 +1,7 @@
 {
-  "name": "github-issues-and-comments",
+  "name": "github-prs-and-comments",
   "version": "1.0.0",
-  "description": "Example GraphQL app that renders latest issues and issue comments for a given GitHub repository.",
+  "description": "Example GraphQL app that renders latest pull requests and their first comments for a given GitHub repository.",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html"

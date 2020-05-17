@@ -8,7 +8,7 @@ export enum State {
 export interface Data {
   state: State
   errorMsg?: string
-  content?: ContentData
+  content?: RepositoryData
   owner?: string
   name?: string
 }
@@ -21,7 +21,7 @@ export type CommentData = {
   }
 }
 
-export type IssueData = {
+export type PullRequestData = {
   title: string
   body: string
   createdAt: string
@@ -33,11 +33,12 @@ export type IssueData = {
   }
 }
 
-export type ContentData = {
+export type RepositoryData = {
   repository: {
     name: string
-    issues: {
-      nodes: IssueData[]
+    description: string
+    pullRequests: {
+      nodes: PullRequestData[]
     }
   }
 }

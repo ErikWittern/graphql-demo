@@ -1,11 +1,12 @@
 import { token } from './token'
 
-export async function fetchGraphQL(owner: string, name: string, issues: number, comments: number) {
+export async function fetchGraphQL(owner: string, name: string, pullRequests: number, comments: number) {
   const query = `
-    query fetch ($owner: String!, $name: String!, $issues: Int!, $comments: Int!){
+    query fetch ($owner: String!, $name: String!, $pullRequests: Int!, $comments: Int!){
       repository(owner: $owner name: $name) {
         name
-        issues(last: $issues) {
+        description
+        pullRequests(last: $pullRequests) {
           nodes {
             title
             createdAt
@@ -13,7 +14,7 @@ export async function fetchGraphQL(owner: string, name: string, issues: number, 
             author {
               login
             }
-            comments (last: $comments) {
+            comments (first: $comments) {
               nodes {
                 body
                 createdAt
@@ -44,7 +45,7 @@ export async function fetchGraphQL(owner: string, name: string, issues: number, 
       variables: {
         owner,
         name,
-        issues,
+        pullRequests,
         comments
       }
     })

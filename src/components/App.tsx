@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import '../index.css'
 import { RepoForm } from './RepoForm'
-import { Content } from './Content'
+import { Repository } from './Repository'
 import { fetchRest } from '../fetchREST'
 import { fetchGraphQL } from '../fetchGraphQL'
-import { Data, State, ContentData } from '../types'
+import { Data, State, RepositoryData } from '../types'
 
 /**
  * Renders the overall application.
@@ -39,7 +39,7 @@ export function App () {
       return setData({
         ...data,
         state: State.SUCCESS,
-        content: content as ContentData,
+        content: content as RepositoryData,
         owner,
         name
       })
@@ -57,7 +57,7 @@ export function App () {
     case State.WELCOME:
       main = <>
         <h3 className="text-3xl">Welcome!</h3>
-        <p className="text-gray-600">Load a repository's 10 latest issues, and 3 latest comments per issue.</p>
+        <p className="text-gray-600">Load a repository's 10 latest pull requests, and 3 first comments per pull request.</p>
       </>
       break;
     case State.ERROR:
@@ -67,7 +67,7 @@ export function App () {
       </>
       break;
     case State.SUCCESS:
-      main = <Content content={(data.content)} owner={data.owner} name={data.name}/>
+      main = <Repository repositoryData={(data.content)} owner={data.owner} name={data.name}/>
       break;
     case State.LOADING:
       main = <h3 className="text-3xl">Loading...</h3>

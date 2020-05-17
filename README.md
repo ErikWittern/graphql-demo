@@ -1,5 +1,5 @@
-# GitHub Issues & Comments
-Example GraphQL app that renders latest issues and issue comments for a given GitHub repository. The purpose of this app is to contrast the use of GitHub's [REST API v3](https://developer.github.com/v3/) vs. its [GraphQL API v4](https://developer.github.com/v4/). Written in [TypeScript](https://www.typescriptlang.org/), uses the [React](https://reactjs.org/) UI library and [Tailwind CSS](https://tailwindcss.com/) for styling.
+# GitHub PRs & Comments
+Example GraphQL app that renders latest pull requests and their first comments for a given GitHub repository. The purpose of this app is to contrast the use of GitHub's [REST API v3](https://developer.github.com/v3/) vs. its [GraphQL API v4](https://developer.github.com/v4/). Written in [TypeScript](https://www.typescriptlang.org/), uses the [React](https://reactjs.org/) UI library and [Tailwind CSS](https://tailwindcss.com/) for styling.
 
 
 ## Providing an access token

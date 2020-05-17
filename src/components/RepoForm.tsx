@@ -25,7 +25,7 @@ export function RepoForm (props) {
           type="submit"
           className="flex-shrink-0 btn btn-blue ml-2"
           onClick={(e) => load(e)}
-          value="Load issues & comments"/>
+          value="Load PRs & comments"/>
       </div>
     </form>
   )
